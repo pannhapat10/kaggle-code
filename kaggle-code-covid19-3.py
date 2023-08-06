@@ -18,8 +18,8 @@ for dirname, _, filenames in os.walk('/kaggle/input'):
     for filename in filenames:
         if filename.endswith('.csv'):
             if i == 200:
-                print(namex)
                 namex =  dirname+'/'+filename
+                print(namex)
                 train_data = pd.read_csv(namex)
                 my_list = list(train_data.columns)
                 for index, item in enumerate(my_list):
